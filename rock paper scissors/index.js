@@ -1,9 +1,12 @@
-const rockPaperScissors = (user) => {
+const prompt=require("prompt-sync")({sigint:true})
+
+const rockPaperScissors = () => {
+    let user = prompt("User option:","Pick which one")
     const options = ['rock','paper','scissors']
     user = user.toLowerCase()
 
     if(!options.includes(user)) {
-        console.log(`${user} is not a valid choice, Pick either: Rock, Paper or Scissors!`);
+        console.log(`${user} is not a valid choice, Pick either: Rock, Paper or Scissors! And then re-run`);
     } else {
         console.log(`User picks: ${user}`);
         let compChoiceIndex = Math.floor(Math.random()*3)
@@ -19,24 +22,6 @@ const rockPaperScissors = (user) => {
 
     }
 }
-rockPaperScissors('Banana')
-rockPaperScissors('rock')
 
-/*
-const diceGame = () => {
-    const userRoll = Math.floor(Math.random() * 6) + 1
-    const computerRoll = Math.floor(Math.random() * 6) + 1
-    console.log("The computer rolled a " + userRoll);
-    console.log("The computer rolled a " + computerRoll);
-    if (userRoll > computerRoll) {
-        return "Well done, you win!"
-    } else if (userRoll < computerRoll) {
-        return "Better luck next time!"
-    } else {
-        return "Tie!"
-    }
-}
+rockPaperScissors()
 
-console.log(diceGame)
-
-*/
