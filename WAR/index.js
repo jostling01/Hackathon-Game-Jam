@@ -95,10 +95,5 @@ const playGame = () => {
         }
     }
 }
-/*
-Jack of spades vs 2 of clubs
-split at the first space
-Jack vs 2
-*/
 
-playGame(5);
+playGame()
